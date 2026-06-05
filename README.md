@@ -2,7 +2,7 @@
 
 Portafolio profesional.
 
-**Live:** *Se actualizará después del deploy*
+**Live:** [armando-masias.cofoundy.dev](https://armando-masias.cofoundy.dev/)
 
 ## Tech Stack
 
