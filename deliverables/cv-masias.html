@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Armando Masías — Yacht Crew CV</title>
+<style>
+  :root {
+    --navy: #0F2A4A;
+    --steel: #3B6E9C;
+    --ink: #1f2b38;
+    --muted: #5a6b7c;
+    --line: #d7dee6;
+    --bg-soft: #f4f7fa;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html, body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    font-size: 9.4px;
+    line-height: 1.42;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+  }
+
+  /* ---------- HEADER ---------- */
+  .header {
+    display: flex;
+    background: var(--navy);
+    color: #fff;
+    padding: 16px 20px;
+    align-items: center;
+    gap: 18px;
+  }
+  .header .photo {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.85);
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  }
+  .header .id { flex: 1; }
+  .header h1 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.05;
+  }
+  .header .role {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #bcd3e8;
+    text-transform: uppercase;
+    margin-top: 3px;
+    font-weight: 600;
+  }
+  .header .contact {
+    margin-top: 9px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 18px;
+    font-size: 9px;
+    color: #e3edf6;
+  }
+  .header .contact span { white-space: nowrap; }
+  .header .contact b { color: #fff; font-weight: 600; }
+
+  /* ---------- BODY GRID ---------- */
+  .body {
+    display: flex;
+  }
+  .left {
+    width: 33%;
+    background: var(--bg-soft);
+    padding: 15px 16px 18px 20px;
+    border-right: 1px solid var(--line);
+  }
+  .right {
+    width: 67%;
+    padding: 15px 22px 14px 20px;
+  }
+
+  h2.sec {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color: var(--navy);
+    font-weight: 800;
+    margin-bottom: 7px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--steel);
+  }
+  .left h2.sec { margin-top: 16px; }
+  .left h2.sec:first-child { margin-top: 0; }
+  .right .block { margin-bottom: 13px; }
+  .right .block:first-child { margin-top: 0; }
+
+  /* ---------- LEFT COLUMN ---------- */
+  .kv { margin-bottom: 3px; }
+  .kv b { color: var(--navy); font-weight: 700; }
+  .kv span { color: var(--muted); }
+
+  ul.clean { list-style: none; }
+  ul.clean li {
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 3px;
+    color: var(--ink);
+  }
+  ul.clean li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 6px;
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--steel);
+  }
+
+  .lang-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  .lang-row .name { font-weight: 600; color: var(--navy); }
+  .lang-row .lvl { color: var(--muted); font-size: 8.4px; }
+
+  .cert-group { margin-bottom: 8px; }
+  .cert-group .title {
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 2px;
+    font-size: 9.2px;
+  }
+  .cert-group .desc { color: var(--muted); font-size: 8.6px; line-height: 1.38; }
+
+  /* ---------- RIGHT COLUMN ---------- */
+  .profile { color: var(--ink); text-align: justify; }
+
+  .exp { margin-bottom: 10px; }
+  .exp .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .exp .vessel { font-weight: 800; color: var(--navy); font-size: 10px; }
+  .exp .dates { color: var(--steel); font-size: 8.6px; font-weight: 600; white-space: nowrap; }
+  .exp .jobrole {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 9px;
+    margin-bottom: 3px;
+  }
+  .exp ul.clean li { margin-bottom: 2px; line-height: 1.36; }
+
+  .edu-item { margin-bottom: 5px; }
+  .edu-item .school { font-weight: 700; color: var(--navy); }
+  .edu-item .deg { color: var(--muted); font-size: 8.8px; }
+
+  .refs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 18px;
+  }
+  .ref .name { font-weight: 700; color: var(--navy); }
+  .ref .org { color: var(--ink); font-size: 8.8px; }
+  .ref .ph { color: var(--muted); font-size: 8.6px; }
+
+  .footer {
+    text-align: center;
+    font-size: 7.6px;
+    color: #9aa7b4;
+    padding: 6px 0 6px;
+    border-top: 1px solid var(--line);
+    margin: 2px 20px 0;
+    letter-spacing: 0.4px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <img class="photo" src="photo.jpg" alt="Armando Masías">
+    <div class="id">
+      <h1>Armando Masías</h1>
+      <div class="role">Deckhand / Tender Driver</div>
+      <div class="contact">
+        <span><b>📍</b> Fort Lauderdale, FL</span>
+        <span><b>✉</b> aamasiasmorales@hotmail.com</span>
+        <span><b>☎</b> +1 954 856 1076</span>
+        <span><b>◎</b> instagram.com/armandoanthony33</span>
+        <span><b>Nationality:</b> Peruvian</span>
+        <span><b>DOB:</b> 21 Jun 1989</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <!-- LEFT COLUMN -->
+    <div class="left">
+      <h2 class="sec">Personal</h2>
+      <div class="kv"><b>Status:</b> <span>Single</span></div>
+      <div class="kv"><b>Health:</b> <span>Fit &amp; healthy, no tattoos</span></div>
+      <div class="kv"><b>Vaccination:</b> <span>COVID-19 vaccinated</span></div>
+
+      <h2 class="sec">Certifications &amp; Clearances</h2>
+      <div class="cert-group">
+        <div class="title">STCW Safety &amp; Security</div>
+        <div class="desc">Certificate of Proficiency II/5 · Basic Safety Training IMO 1.13 / 1.19 / 1.20 / 1.21 · Marine Environmental Awareness IMO 1.38 · Security Training for Seafarers with Designated Security Duties IMO 3.26 · Security Awareness IMO 3.27</div>
+      </div>
+      <div class="cert-group">
+        <div class="title">Codes &amp; Compliance</div>
+        <div class="desc">ISM Code Certificate · ISPS Code Certificate · Induction in Basic First Aid · Handling, Storage &amp; Preparation of Food on Ships (ILO Convention 1946)</div>
+      </div>
+      <div class="cert-group">
+        <div class="title">Documents &amp; Clearances</div>
+        <div class="desc">US B1/B2 Visa — valid to 01 Feb 2034 · ENG1 Medical — valid to 02 Jan 2028 · PADI Open Water Diver · Valid Driver License</div>
+      </div>
+
+      <h2 class="sec">Languages</h2>
+      <div class="lang-row"><span class="name">English</span><span class="lvl">Fluent</span></div>
+      <div class="lang-row"><span class="name">French</span><span class="lvl">Conversational</span></div>
+      <div class="lang-row"><span class="name">Spanish</span><span class="lvl">Native</span></div>
+      <div class="lang-row"><span class="name">Portuguese</span><span class="lvl">Conversational</span></div>
+
+      <h2 class="sec">Skills</h2>
+      <ul class="clean">
+        <li>Tender operations &amp; guest transfer</li>
+        <li>Exterior maintenance &amp; detailing</li>
+        <li>Teak deck cleaning &amp; restoration</li>
+        <li>Mooring &amp; unmooring</li>
+        <li>Docking &amp; undocking</li>
+        <li>Helmsman / steering</li>
+        <li>Line handling &amp; fendering</li>
+        <li>Anchoring operations</li>
+        <li>Bridge watchkeeping &amp; lookout</li>
+        <li>ISM / ISPS compliance</li>
+        <li>Safety equipment &amp; PPE</li>
+        <li>Guest services &amp; hospitality</li>
+      </ul>
+
+      <h2 class="sec">Education &amp; Training</h2>
+      <div class="edu-item">
+        <div class="school">Caribbean Maritime University</div>
+        <div class="deg">Maritime Training — Jamaica</div>
+      </div>
+      <div class="edu-item">
+        <div class="school">Merchant Marine School (ENAMM)</div>
+        <div class="deg">Merchant Marine Training — Peru</div>
+      </div>
+      <div class="edu-item">
+        <div class="school">Continental Aquatic Training &amp; Development Center</div>
+        <div class="deg">Aquatic &amp; Diving Training</div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right">
+      <div class="block">
+        <h2 class="sec">Profile</h2>
+        <p class="profile">Experienced deckhand and tender driver with a background in private and commercial yacht operations, specializing in tender handling, guest transfers, and exterior maintenance to superyacht standards. A high-end hospitality background paired with hands-on seamanship — docking, line handling, teak and stainless restoration, and full deck upkeep. Multilingual (EN/FR/ES/PT), US work-ready with a B1/B2 visa to 2034 and a current ENG1 medical. Reliable, disciplined, and effective under pressure — ready to step aboard and contribute from day one.</p>
+      </div>
+
+      <div class="block">
+        <h2 class="sec">Sea Service &amp; Experience</h2>
+
+        <div class="exp">
+          <div class="top"><span class="vessel">M/Y Koju</span><span class="dates">Apr – May 2026</span></div>
+          <div class="jobrole">Deckhand / Exterior Maintenance · Fort Lauderdale</div>
+          <ul class="clean">
+            <li>Restored stainless steel and exterior finishes to a mirror shine through professional polishing and surface work.</li>
+            <li>Brought teak back to superyacht standard with full cleaning, sanding and restoration.</li>
+            <li>Kept the vessel show-ready — owning washdowns, detailing and routine upkeep across all exterior areas.</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="top"><span class="vessel">M/Y Maje</span><span class="dates">Jan – Apr 2026</span></div>
+          <div class="jobrole">Mate / Deckhand · Fort Lauderdale</div>
+          <ul class="clean">
+            <li>Kept fiberglass and metal surfaces pristine through routine washing and polishing.</li>
+            <li>Delivered high-yacht-standard exterior detailing with rotary polishing machines and marine-grade products (3M, Flitz).</li>
+            <li>Supported safe docking and undocking, working seamlessly with the captain and crew under pressure.</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="top"><span class="vessel">M/Y Epic &amp; M/Y Intrepid</span><span class="dates">Feb 2026</span></div>
+          <div class="jobrole">Deckhand · Fort Lauderdale</div>
+          <ul class="clean">
+            <li>Covered exterior, interior and bilge upkeep across two vessels, keeping every space clean and organized.</li>
+            <li>Polished stainless steel and metal surfaces to high yacht standards.</li>
+            <li>Held the vessels to a guest-ready standard of cleanliness and presentation.</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="top"><span class="vessel">LPG/C Atlantic Victory</span><span class="dates">Feb – Dec 2025</span></div>
+          <div class="jobrole">Junior Officer · Worldwide</div>
+          <ul class="clean">
+            <li>Executed safe mooring and unmooring on every port arrival and departure across a worldwide trading route.</li>
+            <li>Stood bridge watch and lookout duties, supporting safe navigation on transoceanic voyages.</li>
+            <li>Preserved the hull against the open ocean — washing, painting and rust treatment to protect the asset.</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="top"><span class="vessel">M/V Mexican Giant</span><span class="dates">Jun – Nov 2024</span></div>
+          <div class="jobrole">Sole Deck · Cabotage Mexico</div>
+          <ul class="clean">
+            <li>Ran deck single-handed, keeping operations safe and efficient through disciplined routine maintenance.</li>
+            <li>Coordinated and assisted commercial divers during offshore diving operations.</li>
+            <li>Worked deck safely alongside offshore platforms in full compliance with safety procedures.</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="top"><span class="vessel">M/T Alejandro</span><span class="dates">Aug 2023 – Mar 2024</span></div>
+          <div class="jobrole">Able Seaman</div>
+          <ul class="clean">
+            <li>Handled anchoring operations and core seamanship tasks to SOLAS and ISM safety standards.</li>
+            <li>Stayed drill-ready on emergency procedures and onboard safety protocols.</li>
+            <li>Earned a written reference from the master as a reliable, high-performing sailor.</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="top"><span class="vessel">M/T Kefalonia</span><span class="dates">Mar 2016 – Feb 2017</span></div>
+          <div class="jobrole">Able Seaman</div>
+          <ul class="clean">
+            <li>Executed mooring and unmooring on every port arrival and departure; stood bridge watch and monitored vessel traffic.</li>
+            <li>Maintained the deck and kept safety equipment and PPE in service-ready condition.</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="top"><span class="vessel">M/T Paterna</span><span class="dates">May – Nov 2011</span></div>
+          <div class="jobrole">Able Seaman</div>
+          <ul class="clean">
+            <li>Protected the hull on long passages through washing, painting, rust treatment and preservation.</li>
+            <li>Held high safety and operational standards across transoceanic voyages.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2 class="sec">References</h2>
+        <div class="refs">
+          <div class="ref">
+            <div class="name">Capt. Jhonny Pretell</div>
+            <div class="org">Saucy Sue Sailing — Yacht Vessel</div>
+          </div>
+          <div class="ref">
+            <div class="name">Capt. Ray Balboa</div>
+            <div class="org">Barracuda Sailing — Yacht Vessel</div>
+          </div>
+          <div class="ref">
+            <div class="name">Capt. Felix Manco</div>
+            <div class="org">M/T Alejandro — Tanker Ship</div>
+          </div>
+          <div class="ref">
+            <div class="name">C/O Nicole Bellamy</div>
+            <div class="org">M/Y Kujo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">Full reference contact details available on request</div>
+</div>
+</body>
+</html>

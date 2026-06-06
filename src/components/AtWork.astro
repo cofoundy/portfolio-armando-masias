@@ -1,0 +1,35 @@
+---
+import { siteConfig } from "../config";
+
+const photos = [
+  { src: "/work-1.jpg", alt: "Armando Masías — deck work and exterior maintenance aboard a yacht" },
+  { src: "/work-2.jpg", alt: "Armando Masías — exterior detailing and polishing aboard a yacht" },
+];
+---
+
+<div class="w-full h-1 accent-bar-shimmer" style={`background: linear-gradient(90deg, ${siteConfig.accentColor} 0%, ${siteConfig.highlightColor} 50%, ${siteConfig.accentColor} 100%)`}></div>
+
+<section id="atwork" class="py-12 md:py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="mb-10 reveal-left">
+      <h2 class="text-3xl md:text-4xl font-bold" style={`color: ${siteConfig.accentColor}`} data-i18n="sections.atwork">On Deck</h2>
+      <div class="w-16 h-1 mt-3 rounded-full" style={`background-color: ${siteConfig.highlightColor}`}></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+      {photos.map((p, i) => (
+        <div
+          class={`reveal stagger-${i + 1} overflow-hidden rounded-xl card-hover`}
+          style={`border: 1px solid ${siteConfig.accentColor}12`}
+        >
+          <img
+            src={p.src}
+            alt={p.alt}
+            loading="lazy"
+            class="w-full h-80 md:h-96 object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -199,6 +199,7 @@ export const langConfig = {
       certifications: "Certifications & Clearances",
       experience: "Experience",
       education: "Education & Training",
+      atwork: "On Deck",
     },
 
     // Nav labels
@@ -340,6 +341,7 @@ export const langConfig = {
       certifications: "Certificaciones y Habilitaciones",
       experience: "Experiencia",
       education: "Formación y Capacitación",
+      atwork: "A bordo",
     },
 
     // Nav labels
