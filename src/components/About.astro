@@ -8,7 +8,7 @@ import BrandIcon from "./BrandIcon.astro";
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
       <!-- Title -->
       <div class="lg:col-span-3 reveal-left">
-        <h2 class="text-3xl md:text-4xl font-bold" style={`color: ${siteConfig.accentColor}`}>
+        <h2 class="text-3xl md:text-4xl font-bold" style={`color: ${siteConfig.accentColor}`} data-i18n="sections.about">
           About Me
         </h2>
         <div class="w-16 h-1 mt-3 rounded-full" style={`background-color: ${siteConfig.highlightColor}`}></div>
@@ -16,7 +16,7 @@ import BrandIcon from "./BrandIcon.astro";
 
       <!-- Bio -->
       <div class="lg:col-span-9 reveal stagger-1">
-        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed" data-i18n-html="aboutMe">
           <Fragment set:html={siteConfig.aboutMe} />
         </p>
       </div>
@@ -24,17 +24,17 @@ import BrandIcon from "./BrandIcon.astro";
 
     <!-- Skills -->
     <div class="mt-10 pt-8 border-t reveal stagger-2" style={`border-color: ${siteConfig.accentColor}15`}>
-      <h3 class="text-sm font-semibold uppercase tracking-wider mb-4" style={`color: ${siteConfig.accentColor}`}>
+      <h3 class="text-sm font-semibold uppercase tracking-wider mb-4" style={`color: ${siteConfig.accentColor}`} data-i18n="sections.skills">
         Skills & Competencies
       </h3>
       <div class="flex flex-wrap gap-2">
-        {siteConfig.skills.map((skill) => (
+        {siteConfig.skills.map((skill, i) => (
           <span
             class="skill-hover inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium cursor-default"
             style={`background-color: ${siteConfig.accentColor}08; color: ${siteConfig.accentColor}; border: 1px solid ${siteConfig.accentColor}25`}
           >
             <BrandIcon name={skill} size={14} />
-            {skill}
+            <span data-i18n={`skills.${i}`}>{skill}</span>
           </span>
         ))}
       </div>

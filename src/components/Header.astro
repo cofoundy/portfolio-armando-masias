@@ -16,27 +16,27 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
   >
     <ul class="flex items-center gap-6">
       <li>
-        <a href="#about" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}; --underline-color: ${siteConfig.highlightColor}`}>
+        <a href="#about" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}; --underline-color: ${siteConfig.highlightColor}`} data-i18n="nav.about">
           About
         </a>
       </li>
       {hasProjects && (
         <li>
-          <a href="#projects" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`}>
+          <a href="#projects" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`} data-i18n="nav.certifications">
             Certifications
           </a>
         </li>
       )}
       {hasExperience && (
         <li>
-          <a href="#experience" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`}>
+          <a href="#experience" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`} data-i18n="nav.experience">
             Experience
           </a>
         </li>
       )}
       {hasEducation && (
         <li>
-          <a href="#education" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`}>
+          <a href="#education" class="link-underline text-sm font-medium transition-colors duration-300" style={`color: ${siteConfig.accentColor}`} data-i18n="nav.education">
             Education
           </a>
         </li>

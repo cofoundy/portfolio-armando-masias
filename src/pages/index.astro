@@ -8,6 +8,9 @@ import Education from "../components/Education.astro";
 import Footer from "../components/Footer.astro";
 import { siteConfig } from "../config";
 import "../styles/global.css";
+
+const accent = siteConfig.accentColor;
+const highlight = siteConfig.highlightColor;
 ---
 
 <html lang="en">
@@ -37,6 +40,20 @@ import "../styles/global.css";
     {Astro.site && <meta name="twitter:image" content={new URL('/og.png', Astro.site).href} />}
   </head>
   <body>
+    <!-- Language toggle (EN default, ES secondary) -->
+    <button
+      id="lang-toggle"
+      type="button"
+      aria-label="Switch language"
+      class="fixed top-4 right-4 z-[60] inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide shadow-md backdrop-blur-md bg-white/90 transition-transform duration-200 hover:scale-105"
+      style={`color: ${accent}; border: 1px solid ${accent}25`}
+    >
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={`color: ${highlight}`}>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+      </svg>
+      <span id="lang-toggle-label">ES</span>
+    </button>
+
     <Header />
     <main>
       <Hero />
@@ -48,6 +65,56 @@ import "../styles/global.css";
     <Footer />
 
     <script>
+      // ── Bilingual toggle (EN default, ES secondary) ──────────────────────
+      import { langConfig } from "../config";
+
+      type Lang = "en" | "es";
+
+      // Resolve a dotted path like "experience.0.bullet.1" against a lang dict.
+      function resolve(dict: any, path: string): string | undefined {
+        const parts = path.split(".");
+        let cur: any = dict;
+        for (const p of parts) {
+          if (cur == null) return undefined;
+          cur = Array.isArray(cur) ? cur[Number(p)] : cur[p];
+        }
+        return typeof cur === "string" ? cur : undefined;
+      }
+
+      function applyLang(lang: Lang) {
+        const dict = langConfig[lang];
+        if (!dict) return;
+
+        document.querySelectorAll<HTMLElement>("[data-i18n]").forEach((el) => {
+          const val = resolve(dict, el.dataset.i18n as string);
+          if (val != null) el.textContent = val;
+        });
+        document.querySelectorAll<HTMLElement>("[data-i18n-html]").forEach((el) => {
+          const val = resolve(dict, el.dataset.i18nHtml as string);
+          if (val != null) el.innerHTML = val;
+        });
+
+        document.documentElement.setAttribute("lang", lang);
+        const label = document.getElementById("lang-toggle-label");
+        // Button shows the OTHER language (the one you can switch TO).
+        if (label) label.textContent = lang === "en" ? "ES" : "EN";
+      }
+
+      const stored = (localStorage.getItem("lang") as Lang | null);
+      let current: Lang = stored === "es" ? "es" : "en"; // EN default
+      // EN is server-rendered (first paint); only re-apply if ES is persisted.
+      if (current === "es") applyLang("es");
+      else {
+        const label = document.getElementById("lang-toggle-label");
+        if (label) label.textContent = "ES";
+      }
+
+      document.getElementById("lang-toggle")?.addEventListener("click", () => {
+        current = current === "en" ? "es" : "en";
+        localStorage.setItem("lang", current);
+        applyLang(current);
+      });
+
       // Scroll reveal observer
       const observer = new IntersectionObserver(
         (entries) => {
