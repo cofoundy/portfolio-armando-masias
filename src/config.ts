@@ -16,7 +16,7 @@ export const siteConfig = {
   ],
 
   tagline:
-    "Reliable yacht crew specializing in tender operations, exterior maintenance, and guest support — ready to join your vessel.",
+    "Tender driver and exterior specialist who keeps your yacht flawless and your guests safe — multilingual, US work-ready, and on call for your next crossing.",
 
   social: {
     email: "aamasiasmorales@hotmail.com",
@@ -24,7 +24,7 @@ export const siteConfig = {
   },
 
   aboutMe:
-    "Experienced deckhand with a background in private and commercial yacht operations, specializing in tender handling, exterior maintenance, and general deck duties. I combine a strong foundation in high-end hospitality with practical maritime skills — safety procedures, line handling, docking operations, and guest support. Reliable, disciplined, and detail-oriented, I perform effectively under pressure in fast-paced environments. Multilingual and proactive, I bring professionalism, discretion, and a strong focus on safety and service excellence. Peruvian national based in Fort Lauderdale, FL, holding a valid US B1/B2 visa and ENG1 medical.",
+    "I'm a deckhand and tender driver who has crewed eight vessels — from private superyachts to commercial ships — and I know what a captain needs before being asked. My specialty is <strong>tender operations and guest transfers</strong>: moving owners and guests safely while keeping the exterior in show-ready condition. I pair a <strong>high-end hospitality background</strong> with hands-on seamanship — docking, line handling, teak and stainless restoration, and full deck upkeep to superyacht standards. I'm <strong>multilingual (English, French, Spanish, Portuguese)</strong>, an asset in the US and Mediterranean fleets, and I bring the <strong>reliability and discipline</strong> captains have put in writing. Based in Fort Lauderdale and <strong>US work-ready with a B1/B2 visa valid to 2034 and a current ENG1 medical</strong>, I can step aboard and contribute from day one.",
 
   skills: [
     "Tender operations & guest transfer",
@@ -75,9 +75,9 @@ export const siteConfig = {
       title: "Deckhand / Exterior Maintenance",
       dateRange: "Apr 2026 – May 2026",
       bullets: [
-        "Professional yacht polishing and surface restoration on stainless steel and exterior finishes",
-        "Teak cleaning, sanding and restoration to superyacht standards",
-        "Supported general deck operations and exterior detailing to keep the vessel in pristine condition",
+        "Restored stainless steel and exterior finishes to a mirror shine through professional polishing and surface work",
+        "Brought teak back to superyacht standard with full cleaning, sanding and restoration",
+        "Kept the vessel show-ready, owning washdowns, detailing and routine upkeep across all exterior areas",
       ],
     },
     {
@@ -85,9 +85,9 @@ export const siteConfig = {
       title: "Mate / Deckhand",
       dateRange: "Jan 2026 – Apr 2026",
       bullets: [
-        "Deck maintenance including washing and polishing of fiberglass and metals",
-        "Operated rotary polishing machines and marine-grade products (3M, Flitz)",
-        "Assisted with docking and undocking; worked closely with captain and crew in a fast-paced environment",
+        "Kept fiberglass and metal surfaces in pristine condition through routine washing and polishing",
+        "Delivered high-yacht-standard exterior detailing with rotary polishing machines and marine-grade products (3M, Flitz)",
+        "Supported safe docking and undocking, working seamlessly with the captain and crew under pressure",
       ],
     },
     {
@@ -95,9 +95,9 @@ export const siteConfig = {
       title: "Deckhand",
       dateRange: "Feb 2026",
       bullets: [
-        "Exterior wash, interior cleaning and organization, bilge cleaning and maintenance",
-        "Polishing of stainless steel and metal surfaces to high yacht standards",
-        "Ensured high standards of cleanliness and presentation",
+        "Covered exterior, interior and bilge upkeep across two vessels, keeping every space clean and organized",
+        "Polished stainless steel and metal surfaces to high yacht standards",
+        "Held the vessels to a guest-ready standard of cleanliness and presentation",
       ],
     },
     {
@@ -105,9 +105,9 @@ export const siteConfig = {
       title: "Junior Officer (Worldwide)",
       dateRange: "Feb 2025 – Dec 2025",
       bullets: [
-        "Assisted with mooring and unmooring operations during port arrivals and departures",
-        "Conducted bridge watchkeeping, navigation watch routines and lookout duties",
-        "Deck maintenance — washing, painting, rust treatment and preservation on transoceanic voyages",
+        "Executed safe mooring and unmooring on every port arrival and departure across a worldwide trading route",
+        "Stood bridge watch and lookout duties, supporting safe navigation on transoceanic voyages",
+        "Preserved the hull against the open ocean — washing, painting and rust treatment to protect the asset",
       ],
     },
     {
@@ -115,9 +115,9 @@ export const siteConfig = {
       title: "Sole Deck (Cabotage Mexico)",
       dateRange: "Jun 2024 – Nov 2024",
       bullets: [
-        "Routine maintenance and upkeep to ensure safe and efficient operations",
-        "Supported offshore diving operations, coordinating and assisting commercial divers",
-        "Assisted with deck operations in proximity to offshore platforms in full safety compliance",
+        "Ran deck single-handed, keeping operations safe and efficient through disciplined routine maintenance",
+        "Coordinated and assisted commercial divers during offshore diving operations",
+        "Worked deck safely alongside offshore platforms in full compliance with safety procedures",
       ],
     },
     {
@@ -125,9 +125,9 @@ export const siteConfig = {
       title: "Able Seaman",
       dateRange: "Aug 2023 – Mar 2024",
       bullets: [
-        "Anchoring operations and general seamanship tasks",
-        "Familiar with emergency procedures, drills and onboard safety protocols",
-        "Maintained cleanliness and organization of deck areas and equipment",
+        "Handled anchoring operations and core seamanship tasks to SOLAS and ISM safety standards",
+        "Stayed drill-ready on emergency procedures and onboard safety protocols",
+        "Kept deck areas and equipment clean, organized and ready for use — earned a written reference from the master as a reliable sailor",
       ],
     },
     {
@@ -135,9 +135,9 @@ export const siteConfig = {
       title: "Able Seaman",
       dateRange: "Mar 2016 – Feb 2017",
       bullets: [
-        "Mooring and unmooring during port arrivals and departures",
-        "Bridge watchkeeping, navigation watch routines and vessel-traffic monitoring",
-        "Deck maintenance and use/maintenance of safety equipment and PPE",
+        "Executed mooring and unmooring on every port arrival and departure",
+        "Stood bridge watch and monitored vessel traffic to keep navigation safe",
+        "Maintained the deck and kept safety equipment and PPE in service-ready condition",
       ],
     },
     {
@@ -145,8 +145,8 @@ export const siteConfig = {
       title: "Able Seaman",
       dateRange: "May 2011 – Nov 2011",
       bullets: [
-        "Deck maintenance — washing, painting, rust treatment and preservation",
-        "Participated in transoceanic voyages maintaining high safety and operational standards",
+        "Protected the hull on long passages through washing, painting, rust treatment and preservation",
+        "Held high safety and operational standards across transoceanic voyages",
       ],
     },
   ],
@@ -185,9 +185,9 @@ export const langConfig = {
     // Hero / About
     title: "Deckhand / Tender Driver",
     tagline:
-      "Reliable yacht crew specializing in tender operations, exterior maintenance, and guest support — ready to join your vessel.",
+      "Tender driver and exterior specialist who keeps your yacht flawless and your guests safe — multilingual, US work-ready, and on call for your next crossing.",
     aboutMe:
-      "Experienced deckhand with a background in private and commercial yacht operations, specializing in tender handling, exterior maintenance, and general deck duties. I combine a strong foundation in high-end hospitality with practical maritime skills — safety procedures, line handling, docking operations, and guest support. Reliable, disciplined, and detail-oriented, I perform effectively under pressure in fast-paced environments. Multilingual and proactive, I bring professionalism, discretion, and a strong focus on safety and service excellence. Peruvian national based in Fort Lauderdale, FL, holding a valid US B1/B2 visa and ENG1 medical.",
+      "I'm a deckhand and tender driver who has crewed eight vessels — from private superyachts to commercial ships — and I know what a captain needs before being asked. My specialty is <strong>tender operations and guest transfers</strong>: moving owners and guests safely while keeping the exterior in show-ready condition. I pair a <strong>high-end hospitality background</strong> with hands-on seamanship — docking, line handling, teak and stainless restoration, and full deck upkeep to superyacht standards. I'm <strong>multilingual (English, French, Spanish, Portuguese)</strong>, an asset in the US and Mediterranean fleets, and I bring the <strong>reliability and discipline</strong> captains have put in writing. Based in Fort Lauderdale and <strong>US work-ready with a B1/B2 visa valid to 2034 and a current ENG1 medical</strong>, I can step aboard and contribute from day one.",
     getInTouch: "Get in touch",
     viewProject: "View project",
     rights: "All rights reserved.",
@@ -252,64 +252,64 @@ export const langConfig = {
       {
         title: "Deckhand / Exterior Maintenance",
         bullets: [
-          "Professional yacht polishing and surface restoration on stainless steel and exterior finishes",
-          "Teak cleaning, sanding and restoration to superyacht standards",
-          "Supported general deck operations and exterior detailing to keep the vessel in pristine condition",
+          "Restored stainless steel and exterior finishes to a mirror shine through professional polishing and surface work",
+          "Brought teak back to superyacht standard with full cleaning, sanding and restoration",
+          "Kept the vessel show-ready, owning washdowns, detailing and routine upkeep across all exterior areas",
         ],
       },
       {
         title: "Mate / Deckhand",
         bullets: [
-          "Deck maintenance including washing and polishing of fiberglass and metals",
-          "Operated rotary polishing machines and marine-grade products (3M, Flitz)",
-          "Assisted with docking and undocking; worked closely with captain and crew in a fast-paced environment",
+          "Kept fiberglass and metal surfaces in pristine condition through routine washing and polishing",
+          "Delivered high-yacht-standard exterior detailing with rotary polishing machines and marine-grade products (3M, Flitz)",
+          "Supported safe docking and undocking, working seamlessly with the captain and crew under pressure",
         ],
       },
       {
         title: "Deckhand",
         bullets: [
-          "Exterior wash, interior cleaning and organization, bilge cleaning and maintenance",
-          "Polishing of stainless steel and metal surfaces to high yacht standards",
-          "Ensured high standards of cleanliness and presentation",
+          "Covered exterior, interior and bilge upkeep across two vessels, keeping every space clean and organized",
+          "Polished stainless steel and metal surfaces to high yacht standards",
+          "Held the vessels to a guest-ready standard of cleanliness and presentation",
         ],
       },
       {
         title: "Junior Officer (Worldwide)",
         bullets: [
-          "Assisted with mooring and unmooring operations during port arrivals and departures",
-          "Conducted bridge watchkeeping, navigation watch routines and lookout duties",
-          "Deck maintenance — washing, painting, rust treatment and preservation on transoceanic voyages",
+          "Executed safe mooring and unmooring on every port arrival and departure across a worldwide trading route",
+          "Stood bridge watch and lookout duties, supporting safe navigation on transoceanic voyages",
+          "Preserved the hull against the open ocean — washing, painting and rust treatment to protect the asset",
         ],
       },
       {
         title: "Sole Deck (Cabotage Mexico)",
         bullets: [
-          "Routine maintenance and upkeep to ensure safe and efficient operations",
-          "Supported offshore diving operations, coordinating and assisting commercial divers",
-          "Assisted with deck operations in proximity to offshore platforms in full safety compliance",
+          "Ran deck single-handed, keeping operations safe and efficient through disciplined routine maintenance",
+          "Coordinated and assisted commercial divers during offshore diving operations",
+          "Worked deck safely alongside offshore platforms in full compliance with safety procedures",
         ],
       },
       {
         title: "Able Seaman",
         bullets: [
-          "Anchoring operations and general seamanship tasks",
-          "Familiar with emergency procedures, drills and onboard safety protocols",
-          "Maintained cleanliness and organization of deck areas and equipment",
+          "Handled anchoring operations and core seamanship tasks to SOLAS and ISM safety standards",
+          "Stayed drill-ready on emergency procedures and onboard safety protocols",
+          "Kept deck areas and equipment clean, organized and ready for use — earned a written reference from the master as a reliable sailor",
         ],
       },
       {
         title: "Able Seaman",
         bullets: [
-          "Mooring and unmooring during port arrivals and departures",
-          "Bridge watchkeeping, navigation watch routines and vessel-traffic monitoring",
-          "Deck maintenance and use/maintenance of safety equipment and PPE",
+          "Executed mooring and unmooring on every port arrival and departure",
+          "Stood bridge watch and monitored vessel traffic to keep navigation safe",
+          "Maintained the deck and kept safety equipment and PPE in service-ready condition",
         ],
       },
       {
         title: "Able Seaman",
         bullets: [
-          "Deck maintenance — washing, painting, rust treatment and preservation",
-          "Participated in transoceanic voyages maintaining high safety and operational standards",
+          "Protected the hull on long passages through washing, painting, rust treatment and preservation",
+          "Held high safety and operational standards across transoceanic voyages",
         ],
       },
     ],
@@ -326,9 +326,9 @@ export const langConfig = {
     // Hero / About
     title: "Marinero de Cubierta / Operador de Tender",
     tagline:
-      "Tripulante de yate confiable, especializado en operación de tenders, mantenimiento exterior y atención a pasajeros — listo para sumarme a tu embarcación.",
+      "Operador de tender y especialista en exteriores que mantiene tu yate impecable y a tus pasajeros seguros — multilingüe, habilitado para trabajar en EE. UU. y disponible para tu próxima travesía.",
     aboutMe:
-      "Marinero de cubierta con experiencia en operaciones de yates privados y comerciales, especializado en el manejo de tenders, mantenimiento exterior y labores generales de cubierta. Combino una base sólida en hotelería de alto nivel con habilidades marítimas prácticas — procedimientos de seguridad, manejo de cabos, operaciones de atraque y atención a pasajeros. Confiable, disciplinado y atento al detalle, me desempeño con eficacia bajo presión en entornos de ritmo acelerado. Multilingüe y proactivo, aporto profesionalismo, discreción y un fuerte enfoque en la seguridad y la excelencia en el servicio. Ciudadano peruano radicado en Fort Lauderdale, FL, con visa estadounidense B1/B2 vigente y certificado médico ENG1.",
+      "Soy marinero de cubierta y operador de tender; he tripulado ocho embarcaciones — desde superyates privados hasta buques comerciales — y sé lo que un capitán necesita antes de que lo pida. Mi especialidad son las <strong>operaciones de tender y el traslado de pasajeros</strong>: mover a los dueños y huéspedes con seguridad mientras mantengo el exterior en condiciones impecables. Combino una <strong>sólida formación en hotelería de alto nivel</strong> con marinería práctica — atraque, manejo de cabos, restauración de teca y acero inoxidable, y mantenimiento integral de cubierta a estándares de superyate. Soy <strong>multilingüe (inglés, francés, español, portugués)</strong>, una ventaja en las flotas de EE. UU. y el Mediterráneo, y aporto la <strong>fiabilidad y disciplina</strong> que los capitanes han dejado por escrito. Radicado en Fort Lauderdale y <strong>habilitado para trabajar en EE. UU. con visa B1/B2 vigente hasta 2034 y certificado médico ENG1 al día</strong>, puedo subir a bordo y aportar desde el primer día.",
     getInTouch: "Contáctame",
     viewProject: "Ver proyecto",
     rights: "Todos los derechos reservados.",
@@ -393,64 +393,64 @@ export const langConfig = {
       {
         title: "Marinero de Cubierta / Mantenimiento Exterior",
         bullets: [
-          "Pulido profesional de yates y restauración de superficies en acero inoxidable y acabados exteriores",
-          "Limpieza, lijado y restauración de teca según estándares de superyate",
-          "Apoyo en operaciones generales de cubierta y detallado exterior para mantener la embarcación impecable",
+          "Restauré el acero inoxidable y los acabados exteriores hasta un brillo de espejo con pulido profesional y trabajo de superficie",
+          "Devolví la teca a estándar de superyate con limpieza, lijado y restauración completos",
+          "Mantuve la embarcación lista para mostrar, encargándome de los lavados, el detallado y el mantenimiento de rutina de todas las áreas exteriores",
         ],
       },
       {
         title: "Contramaestre / Marinero de Cubierta",
         bullets: [
-          "Mantenimiento de cubierta, incluyendo lavado y pulido de fibra de vidrio y metales",
-          "Operación de pulidoras rotativas y productos de grado marino (3M, Flitz)",
-          "Apoyo en atraque y desatraque; trabajo en estrecha coordinación con el capitán y la tripulación en un entorno de ritmo acelerado",
+          "Mantuve la fibra de vidrio y los metales en condiciones impecables con lavado y pulido de rutina",
+          "Entregué un detallado exterior a estándar de alto yate con pulidoras rotativas y productos de grado marino (3M, Flitz)",
+          "Apoyé un atraque y desatraque seguros, trabajando en perfecta coordinación con el capitán y la tripulación bajo presión",
         ],
       },
       {
         title: "Marinero de Cubierta",
         bullets: [
-          "Lavado exterior, limpieza y organización de interiores, limpieza y mantenimiento de sentinas",
-          "Pulido de superficies de acero inoxidable y metal según altos estándares de yate",
-          "Garantizar altos estándares de limpieza y presentación",
+          "Cubrí el mantenimiento exterior, interior y de sentinas en dos embarcaciones, manteniendo cada espacio limpio y organizado",
+          "Pulí superficies de acero inoxidable y metal según altos estándares de yate",
+          "Mantuve las embarcaciones a un estándar de limpieza y presentación listo para los huéspedes",
         ],
       },
       {
         title: "Oficial Junior (Internacional)",
         bullets: [
-          "Apoyo en operaciones de amarre y desamarre durante arribos y zarpes en puerto",
-          "Guardia de puente, rutinas de guardia de navegación y labores de vigía",
-          "Mantenimiento de cubierta — lavado, pintura, tratamiento de óxido y preservación en travesías transoceánicas",
+          "Ejecuté amarre y desamarre seguros en cada arribo y zarpe en puerto, en una ruta de operación mundial",
+          "Cubrí guardia de puente y labores de vigía, apoyando una navegación segura en travesías transoceánicas",
+          "Protegí el casco frente al mar abierto — lavado, pintura y tratamiento de óxido para preservar el activo",
         ],
       },
       {
         title: "Cubierta Único (Cabotaje México)",
         bullets: [
-          "Mantenimiento de rutina y conservación para asegurar operaciones seguras y eficientes",
-          "Apoyo a operaciones de buceo en alta mar, coordinando y asistiendo a buzos comerciales",
-          "Apoyo en operaciones de cubierta cerca de plataformas marinas con pleno cumplimiento de seguridad",
+          "Manejé la cubierta en solitario, manteniendo operaciones seguras y eficientes con un mantenimiento de rutina disciplinado",
+          "Coordiné y asistí a buzos comerciales durante operaciones de buceo en alta mar",
+          "Trabajé la cubierta con seguridad junto a plataformas marinas, con pleno cumplimiento de los procedimientos de seguridad",
         ],
       },
       {
         title: "Marinero de Primera",
         bullets: [
-          "Operaciones de fondeo y tareas generales de marinería",
-          "Familiarizado con procedimientos de emergencia, simulacros y protocolos de seguridad a bordo",
-          "Mantenimiento de la limpieza y organización de las áreas de cubierta y el equipo",
+          "Manejé operaciones de fondeo y tareas centrales de marinería conforme a los estándares de seguridad SOLAS e ISM",
+          "Me mantuve listo para simulacros en procedimientos de emergencia y protocolos de seguridad a bordo",
+          "Mantuve las áreas de cubierta y el equipo limpios, organizados y listos para usar — obtuve una referencia escrita del capitán como marinero confiable",
         ],
       },
       {
         title: "Marinero de Primera",
         bullets: [
-          "Amarre y desamarre durante arribos y zarpes en puerto",
-          "Guardia de puente, rutinas de guardia de navegación y monitoreo del tráfico marítimo",
-          "Mantenimiento de cubierta y uso/mantenimiento del equipo de seguridad y EPP",
+          "Ejecuté amarre y desamarre en cada arribo y zarpe en puerto",
+          "Cubrí guardia de puente y monitoreo del tráfico marítimo para mantener una navegación segura",
+          "Mantuve la cubierta y conservé el equipo de seguridad y el EPP en condiciones listas para el servicio",
         ],
       },
       {
         title: "Marinero de Primera",
         bullets: [
-          "Mantenimiento de cubierta — lavado, pintura, tratamiento de óxido y preservación",
-          "Participación en travesías transoceánicas manteniendo altos estándares de seguridad y operación",
+          "Protegí el casco en travesías largas con lavado, pintura, tratamiento de óxido y preservación",
+          "Sostuve altos estándares de seguridad y operación a lo largo de travesías transoceánicas",
         ],
       },
     ],
