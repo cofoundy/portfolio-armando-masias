@@ -48,6 +48,7 @@ export const siteConfig = {
       description:
         "Certificate of Proficiency II/5 · Basic Safety Training IMO 1.13 / 1.19 / 1.20 / 1.21 · Marine Environmental Awareness IMO 1.38 · Security Training for Seafarers with Designated Security Duties IMO 3.26 · Security Awareness IMO 3.27",
       link: "",
+      icon: "stcw",
       skills: ["STCW", "Safety", "Security"],
     },
     {
@@ -55,6 +56,7 @@ export const siteConfig = {
       description:
         "ISM Code Certificate · ISPS Code Certificate · Induction in Basic First Aid · Handling, Storage & Preparation of Food on Ships (ILO Convention 1946)",
       link: "",
+      icon: "imo",
       skills: ["ISM", "ISPS", "First Aid"],
     },
     {
@@ -62,6 +64,7 @@ export const siteConfig = {
       description:
         "US B1/B2 Visa (valid until Feb 2034) · ENG1 Medical (valid until Jan 2028) · PADI Open Water Diver · Valid Driver License",
       link: "",
+      icon: "padi",
       skills: ["B1/B2 Visa", "ENG1", "PADI"],
     },
   ],
