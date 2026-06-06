@@ -2,195 +2,227 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Armando Masías — Yacht Crew CV</title>
+<title>Armando Masías — Yacht CV</title>
 <style>
-  :root {
-    --navy: #0F2A4A;
-    --steel: #3B6E9C;
-    --ink: #1f2b38;
-    --muted: #5a6b7c;
-    --line: #d7dee6;
-    --bg-soft: #f4f7fa;
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700&display=swap');
+
+  :root{
+    --navy:#0F2A4A;
+    --navy-deep:#0B2038;
+    --navy-soft:#173758;
+    --steel:#3E6EA5;
+    --steel-light:#6FA0C9;
+    --ink:#1c2530;
+    --muted:#5a6675;
+    --line:#e3e7ec;
+    --paper:#ffffff;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  @page {
-    size: A4;
-    margin: 0;
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:#ccc;}
+  body{
+    font-family:'Barlow',system-ui,sans-serif;
+    color:var(--ink);
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
   }
 
-  html, body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    color: var(--ink);
-    font-size: 9.4px;
-    line-height: 1.42;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+  .page{
+    width:794px;
+    background:var(--navy-deep);
+    margin:0 auto;
+    position:relative;
   }
 
-  .page {
-    width: 210mm;
-    height: 297mm;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
+  /* ============ HEADER ============ */
+  .header{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    padding:30px 36px 26px 36px;
+    background:linear-gradient(105deg,var(--navy-deep) 0%,var(--navy) 55%,var(--navy-soft) 100%);
+    color:#fff;
+    position:relative;
+  }
+  .header::after{
+    content:"";position:absolute;left:0;bottom:0;width:100%;height:4px;
+    background:linear-gradient(90deg,var(--steel),var(--steel-light));
+  }
+  .head-photo{
+    width:118px;height:118px;border-radius:50%;
+    object-fit:cover;object-position:center top;
+    border:4px solid rgba(255,255,255,.9);
+    box-shadow:0 6px 18px rgba(0,0,0,.35);
+    flex-shrink:0;
+  }
+  .head-mid{flex:1;min-width:0;}
+  .head-name{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:46px;font-weight:700;line-height:.98;letter-spacing:1.5px;
+    text-transform:uppercase;
+  }
+  .head-role{
+    font-size:14.5px;font-weight:600;letter-spacing:3px;text-transform:uppercase;
+    color:var(--steel-light);margin-top:6px;
+  }
+  .head-tag{
+    font-size:11px;color:rgba(255,255,255,.72);margin-top:9px;letter-spacing:.4px;
+  }
+  .contact{
+    display:flex;flex-direction:column;gap:7px;flex-shrink:0;
+    border-left:1px solid rgba(255,255,255,.18);
+    padding-left:22px;
+  }
+  .contact .ci{display:flex;align-items:center;gap:9px;font-size:11px;color:rgba(255,255,255,.92);}
+  .contact .ci svg{width:14px;height:14px;flex-shrink:0;stroke:var(--steel-light);}
+
+  /* ============ BODY GRID ============ */
+  .body{display:grid;grid-template-columns:224px 1fr 172px;min-height:2040px;align-items:stretch;}
+  .closing{min-height:240px;}
+
+  /* ---- LEFT NAVY SIDEBAR ---- */
+  .side{
+    background:var(--navy);
+    color:#dfe7f0;
+    padding:26px 22px 40px 28px;
+  }
+  .side .sec{margin-bottom:24px;}
+  .side .sec:last-child{margin-bottom:0;}
+  .side-h{
+    display:flex;align-items:center;gap:8px;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:15px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;
+    color:#fff;margin-bottom:11px;padding-bottom:7px;
+    border-bottom:1px solid rgba(255,255,255,.16);
+  }
+  .side-h svg{width:15px;height:15px;stroke:var(--steel-light);flex-shrink:0;}
+  .side li{
+    list-style:none;font-size:10.6px;line-height:1.45;
+    color:#cdd8e6;margin-bottom:7px;padding-left:13px;position:relative;
+  }
+  .side li::before{
+    content:"";position:absolute;left:0;top:6px;width:5px;height:5px;
+    border-radius:50%;background:var(--steel-light);
+  }
+  .side .kv{font-size:10.6px;line-height:1.5;margin-bottom:6px;color:#cdd8e6;}
+  .side .kv b{color:#fff;font-weight:600;}
+  .side li b{color:#fff;font-weight:600;}
+
+  /* ---- RIGHT WHITE CONTENT ---- */
+  .main{padding:26px 26px 0 28px;min-width:0;display:flex;flex-direction:column;align-self:stretch;background:var(--paper);}
+  .main .sec{margin-bottom:20px;}
+  .main-spacer{height:26px;}
+  .closing-wrap{margin-top:auto;}
+  .closing{
+    margin:0 -26px 0 -28px;
+    background:linear-gradient(105deg,var(--navy-deep),var(--navy) 60%,var(--navy-soft));
+    color:#fff;padding:20px 28px;position:relative;
+    break-inside:avoid;page-break-inside:avoid;
+  }
+  .closing::before{
+    content:"";position:absolute;left:0;top:0;width:4px;height:100%;
+    background:linear-gradient(180deg,var(--steel),var(--steel-light));
+  }
+  .closing .ct{
+    font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;
+    letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:9px;
+  }
+  .closing .ct svg{width:17px;height:17px;stroke:var(--steel-light);}
+  .closing p{font-size:10.5px;line-height:1.55;color:rgba(255,255,255,.82);margin-top:8px;max-width:92%;}
+  .closing .cmeta{
+    display:flex;gap:24px;margin-top:13px;flex-wrap:wrap;
+  }
+  .closing .cmeta span{font-size:10px;color:rgba(255,255,255,.9);display:flex;align-items:center;gap:7px;}
+  .closing .cmeta svg{width:13px;height:13px;stroke:var(--steel-light);}
+  .main-h{
+    display:flex;align-items:center;gap:9px;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:18px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+    color:var(--navy);margin-bottom:11px;
+  }
+  .main-h svg{width:18px;height:18px;stroke:var(--steel);flex-shrink:0;}
+  .main-h::after{
+    content:"";flex:1;height:2px;margin-left:4px;
+    background:linear-gradient(90deg,var(--line),transparent);
+  }
+  .profile-p{font-size:11px;line-height:1.62;color:var(--muted);text-align:justify;}
+
+  /* Experience */
+  .job{display:grid;grid-template-columns:122px 1fr;gap:14px;margin-bottom:14px;break-inside:avoid;page-break-inside:avoid;}
+  .job:last-child{margin-bottom:0;}
+  .main .sec{break-inside:avoid;page-break-inside:avoid;}
+  .main .sec.exp{break-inside:auto;page-break-inside:auto;}
+  .main-h{break-after:avoid;page-break-after:avoid;}
+  .job-meta{}
+  .job-vessel{font-size:11px;font-weight:700;color:var(--navy);line-height:1.25;letter-spacing:.2px;}
+  .job-period{
+    font-size:9px;font-weight:600;color:#fff;background:var(--steel);
+    display:inline-block;padding:2px 7px;border-radius:3px;margin-top:5px;letter-spacing:.3px;
+  }
+  .job-role{font-size:11.5px;font-weight:700;color:var(--ink);margin-bottom:5px;}
+  .job ul{list-style:none;}
+  .job li{
+    font-size:10.2px;line-height:1.4;color:var(--muted);
+    padding-left:13px;position:relative;margin-bottom:3px;
+  }
+  .job li::before{
+    content:"";position:absolute;left:1px;top:6px;width:4px;height:4px;
+    border-radius:1px;background:var(--steel-light);transform:rotate(45deg);
   }
 
-  /* ---------- HEADER ---------- */
-  .header {
-    display: flex;
-    background: var(--navy);
-    color: #fff;
-    padding: 16px 20px;
-    align-items: center;
-    gap: 18px;
-  }
-  .header .photo {
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid rgba(255,255,255,0.85);
-    flex-shrink: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-  }
-  .header .id { flex: 1; }
-  .header h1 {
-    font-size: 25px;
-    letter-spacing: 2px;
-    font-weight: 800;
-    text-transform: uppercase;
-    line-height: 1.05;
-  }
-  .header .role {
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    color: #bcd3e8;
-    text-transform: uppercase;
-    margin-top: 3px;
-    font-weight: 600;
-  }
-  .header .contact {
-    margin-top: 9px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px 18px;
-    font-size: 9px;
-    color: #e3edf6;
-  }
-  .header .contact span { white-space: nowrap; }
-  .header .contact b { color: #fff; font-weight: 600; }
+  /* Education / two-col lists */
+  .edu li{list-style:none;font-size:11px;line-height:1.5;color:var(--muted);
+    padding-left:14px;position:relative;margin-bottom:10px;}
+  .edu li::before{content:"";position:absolute;left:1px;top:6px;width:4px;height:4px;
+    border-radius:50%;background:var(--steel);}
+  .edu li b{color:var(--navy);font-weight:600;}
 
-  /* ---------- BODY GRID ---------- */
-  .body {
-    display: flex;
+  .refs{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;}
+  .ref{font-size:10.4px;line-height:1.35;color:var(--muted);
+    padding-left:13px;position:relative;}
+  .ref::before{content:"";position:absolute;left:0;top:5px;width:5px;height:5px;
+    border-radius:50%;background:var(--steel-light);}
+  .ref b{display:block;color:var(--navy);font-weight:700;font-size:10.6px;}
+
+  .deck-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;}
+  .deck li{list-style:none;font-size:11px;line-height:1.4;color:var(--muted);
+    padding-left:13px;position:relative;margin-bottom:3px;}
+  .deck li::before{content:"\2693";position:absolute;left:0;top:0;font-size:9px;color:var(--steel);}
+
+  .ref-note{font-size:9px;color:#9aa5b2;font-style:italic;margin-top:9px;letter-spacing:.2px;}
+
+  /* ---- FAR-RIGHT PHOTO GALLERY (contained tiles) ---- */
+  .strip{
+    background:var(--navy);
+    display:flex;flex-direction:column;
+    padding:24px 14px;gap:18px;
   }
-  .left {
-    width: 33%;
-    background: var(--bg-soft);
-    padding: 15px 16px 18px 20px;
-    border-right: 1px solid var(--line);
+  .tile{
+    width:100%;height:300px;overflow:hidden;border-radius:5px;
+    box-shadow:0 4px 12px rgba(0,0,0,.30);
+    border:2px solid rgba(255,255,255,.10);
+    flex:0 0 auto;
   }
-  .right {
-    width: 67%;
-    padding: 15px 22px 14px 20px;
+  .tile img{
+    width:100%;height:100%;object-fit:cover;display:block;
+  }
+  .tile.t-officer img{object-position:center 28%;}
+  .tile.t-polishing img{object-position:58% 38%;}
+  .tile.t-deckwork img{object-position:48% 42%;}
+  .tile.t-superyacht img{object-position:50% 50%;}
+  /* navy spacer bridging the page break so tiles land 2-per-page */
+  .gallery-gap{flex:0 0 auto;height:310px;}
+
+  /* Footer band */
+  .footer{
+    background:var(--navy-deep);color:rgba(255,255,255,.78);
+    font-size:9px;letter-spacing:1px;text-transform:uppercase;text-align:center;
+    padding:9px 0;
   }
 
-  h2.sec {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.3px;
-    color: var(--navy);
-    font-weight: 800;
-    margin-bottom: 7px;
-    padding-bottom: 4px;
-    border-bottom: 2px solid var(--steel);
-  }
-  .left h2.sec { margin-top: 16px; }
-  .left h2.sec:first-child { margin-top: 0; }
-  .right .block { margin-bottom: 13px; }
-  .right .block:first-child { margin-top: 0; }
-
-  /* ---------- LEFT COLUMN ---------- */
-  .kv { margin-bottom: 3px; }
-  .kv b { color: var(--navy); font-weight: 700; }
-  .kv span { color: var(--muted); }
-
-  ul.clean { list-style: none; }
-  ul.clean li {
-    position: relative;
-    padding-left: 12px;
-    margin-bottom: 3px;
-    color: var(--ink);
-  }
-  ul.clean li::before {
-    content: "";
-    position: absolute;
-    left: 0; top: 6px;
-    width: 4px; height: 4px;
-    border-radius: 50%;
-    background: var(--steel);
-  }
-
-  .lang-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4px;
-  }
-  .lang-row .name { font-weight: 600; color: var(--navy); }
-  .lang-row .lvl { color: var(--muted); font-size: 8.4px; }
-
-  .cert-group { margin-bottom: 8px; }
-  .cert-group .title {
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 2px;
-    font-size: 9.2px;
-  }
-  .cert-group .desc { color: var(--muted); font-size: 8.6px; line-height: 1.38; }
-
-  /* ---------- RIGHT COLUMN ---------- */
-  .profile { color: var(--ink); text-align: justify; }
-
-  .exp { margin-bottom: 10px; }
-  .exp .top {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-  .exp .vessel { font-weight: 800; color: var(--navy); font-size: 10px; }
-  .exp .dates { color: var(--steel); font-size: 8.6px; font-weight: 600; white-space: nowrap; }
-  .exp .jobrole {
-    color: var(--muted);
-    font-style: italic;
-    font-size: 9px;
-    margin-bottom: 3px;
-  }
-  .exp ul.clean li { margin-bottom: 2px; line-height: 1.36; }
-
-  .edu-item { margin-bottom: 5px; }
-  .edu-item .school { font-weight: 700; color: var(--navy); }
-  .edu-item .deg { color: var(--muted); font-size: 8.8px; }
-
-  .refs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 18px;
-  }
-  .ref .name { font-weight: 700; color: var(--navy); }
-  .ref .org { color: var(--ink); font-size: 8.8px; }
-  .ref .ph { color: var(--muted); font-size: 8.6px; }
-
-  .footer {
-    text-align: center;
-    font-size: 7.6px;
-    color: #9aa7b4;
-    padding: 6px 0 6px;
-    border-top: 1px solid var(--line);
-    margin: 2px 20px 0;
-    letter-spacing: 0.4px;
+  @media print{
+    html,body{background:#fff;}
+    .page{margin:0;width:100%;}
   }
 </style>
 </head>
@@ -198,195 +230,303 @@
 <div class="page">
 
   <!-- HEADER -->
-  <div class="header">
-    <img class="photo" src="photo.jpg" alt="Armando Masías">
-    <div class="id">
-      <h1>Armando Masías</h1>
-      <div class="role">Deckhand / Tender Driver</div>
-      <div class="contact">
-        <span><b>📍</b> Fort Lauderdale, FL</span>
-        <span><b>✉</b> aamasiasmorales@hotmail.com</span>
-        <span><b>☎</b> +1 954 856 1076</span>
-        <span><b>◎</b> instagram.com/armandoanthony33</span>
-        <span><b>Nationality:</b> Peruvian</span>
-        <span><b>DOB:</b> 21 Jun 1989</span>
+  <header class="header">
+    <img class="head-photo" src="cv-assets/profile.png" alt="Armando Masías">
+    <div class="head-mid">
+      <div class="head-name">Armando Masías</div>
+      <div class="head-role">Deckhand &middot; Tender Driver</div>
+      <div class="head-tag">Private &amp; commercial yacht operations &mdash; tender handling, exterior maintenance &amp; deck duties</div>
+    </div>
+    <div class="contact">
+      <div class="ci">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.34a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92z"/></svg>
+        +1 954 856 1076
+      </div>
+      <div class="ci">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        aamasiasmorales@hotmail.com
+      </div>
+      <div class="ci">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Fort Lauderdale, FL
+      </div>
+      <div class="ci">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        @armandoanthony33
       </div>
     </div>
-  </div>
+  </header>
 
+  <!-- BODY -->
   <div class="body">
-    <!-- LEFT COLUMN -->
-    <div class="left">
-      <h2 class="sec">Personal</h2>
-      <div class="kv"><b>Status:</b> <span>Single</span></div>
-      <div class="kv"><b>Health:</b> <span>Fit &amp; healthy, no tattoos</span></div>
-      <div class="kv"><b>Vaccination:</b> <span>COVID-19 vaccinated</span></div>
 
-      <h2 class="sec">Certifications &amp; Clearances</h2>
-      <div class="cert-group">
-        <div class="title">STCW Safety &amp; Security</div>
-        <div class="desc">Certificate of Proficiency II/5 · Basic Safety Training IMO 1.13 / 1.19 / 1.20 / 1.21 · Marine Environmental Awareness IMO 1.38 · Security Training for Seafarers with Designated Security Duties IMO 3.26 · Security Awareness IMO 3.27</div>
-      </div>
-      <div class="cert-group">
-        <div class="title">Codes &amp; Compliance</div>
-        <div class="desc">ISM Code Certificate · ISPS Code Certificate · Induction in Basic First Aid · Handling, Storage &amp; Preparation of Food on Ships (ILO Convention 1946)</div>
-      </div>
-      <div class="cert-group">
-        <div class="title">Documents &amp; Clearances</div>
-        <div class="desc">US B1/B2 Visa — valid to 01 Feb 2034 · ENG1 Medical — valid to 02 Jan 2028 · PADI Open Water Diver · Valid Driver License</div>
+    <!-- LEFT SIDEBAR -->
+    <aside class="side">
+      <div class="sec">
+        <div class="side-h">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 16 0v1" stroke-linecap="round"/></svg>
+          Personal Info
+        </div>
+        <div class="kv"><b>DOB:</b> 21 June 1989</div>
+        <div class="kv"><b>Nationality:</b> Peruvian</div>
+        <div class="kv"><b>Status:</b> Single</div>
+        <div class="kv"><b>Health:</b> Fit &amp; healthy, no tattoos</div>
+        <div class="kv"><b>Vaccination:</b> Covid-19 vaccinated</div>
+        <div class="kv"><b>Languages:</b> English, French, Spanish, Portuguese</div>
       </div>
 
-      <h2 class="sec">Languages</h2>
-      <div class="lang-row"><span class="name">English</span><span class="lvl">Fluent</span></div>
-      <div class="lang-row"><span class="name">French</span><span class="lvl">Conversational</span></div>
-      <div class="lang-row"><span class="name">Spanish</span><span class="lvl">Native</span></div>
-      <div class="lang-row"><span class="name">Portuguese</span><span class="lvl">Conversational</span></div>
-
-      <h2 class="sec">Skills</h2>
-      <ul class="clean">
-        <li>Tender operations &amp; guest transfer</li>
-        <li>Exterior maintenance &amp; detailing</li>
-        <li>Teak deck cleaning &amp; restoration</li>
-        <li>Mooring &amp; unmooring</li>
-        <li>Docking &amp; undocking</li>
-        <li>Helmsman / steering</li>
-        <li>Line handling &amp; fendering</li>
-        <li>Anchoring operations</li>
-        <li>Bridge watchkeeping &amp; lookout</li>
-        <li>ISM / ISPS compliance</li>
-        <li>Safety equipment &amp; PPE</li>
-        <li>Guest services &amp; hospitality</li>
-      </ul>
-
-      <h2 class="sec">Education &amp; Training</h2>
-      <div class="edu-item">
-        <div class="school">Caribbean Maritime University</div>
-        <div class="deg">Maritime Training — Jamaica</div>
-      </div>
-      <div class="edu-item">
-        <div class="school">Merchant Marine School (ENAMM)</div>
-        <div class="deg">Merchant Marine Training — Peru</div>
-      </div>
-      <div class="edu-item">
-        <div class="school">Continental Aquatic Training &amp; Development Center</div>
-        <div class="deg">Aquatic &amp; Diving Training</div>
-      </div>
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="right">
-      <div class="block">
-        <h2 class="sec">Profile</h2>
-        <p class="profile">Experienced deckhand and tender driver with a background in private and commercial yacht operations, specializing in tender handling, guest transfers, and exterior maintenance to superyacht standards. A high-end hospitality background paired with hands-on seamanship — docking, line handling, teak and stainless restoration, and full deck upkeep. Multilingual (EN/FR/ES/PT), US work-ready with a B1/B2 visa to 2034 and a current ENG1 medical. Reliable, disciplined, and effective under pressure — ready to step aboard and contribute from day one.</p>
+      <div class="sec">
+        <div class="side-h">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>
+          Documents &amp; Clearances
+        </div>
+        <ul>
+          <li><b>US B1/B2 Visa</b> — valid until 01 Feb 2034</li>
+          <li><b>ENG 1 Medical</b> — valid until 02 Jan 2028</li>
+          <li>Driver License</li>
+          <li>Open Water Diver (PADI)</li>
+        </ul>
       </div>
 
-      <div class="block">
-        <h2 class="sec">Sea Service &amp; Experience</h2>
+      <div class="sec">
+        <div class="side-h">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg>
+          Certifications
+        </div>
+        <ul>
+          <li>Certificate of Proficiency II/5 — valid until 25 Jan 2029</li>
+          <li>Basic Safety Training IMO 1.13 / 1.19 / 1.20 / 1.21 — valid until 22 Jul 2028</li>
+          <li>Marine Environmental Awareness IMO 1.38 — valid until 10 May 2029</li>
+          <li>Security Training for Seafarers with Designated Security Duties IMO 3.26</li>
+          <li>Security Awareness Training for all Seafarers IMO 3.27</li>
+          <li>Handling, Storage &amp; Preparation of Food on Ships — ILO 1946</li>
+          <li>Induction in Basic First Aid</li>
+          <li>ISM Code Certificate</li>
+          <li>ISPS Code Certificate</li>
+        </ul>
+      </div>
 
-        <div class="exp">
-          <div class="top"><span class="vessel">M/Y Koju</span><span class="dates">Apr – May 2026</span></div>
-          <div class="jobrole">Deckhand / Exterior Maintenance · Fort Lauderdale</div>
-          <ul class="clean">
-            <li>Restored stainless steel and exterior finishes to a mirror shine through professional polishing and surface work.</li>
-            <li>Brought teak back to superyacht standard with full cleaning, sanding and restoration.</li>
-            <li>Kept the vessel show-ready — owning washdowns, detailing and routine upkeep across all exterior areas.</li>
-          </ul>
+      <div class="sec">
+        <div class="side-h">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg>
+          Core Skills
+        </div>
+        <ul>
+          <li>Navigation and Bridge Watches</li>
+          <li>ISM / ISPS Compliances</li>
+          <li>Customer Service</li>
+          <li>Basic First Aid</li>
+          <li>Tender operations &amp; guest transfer</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- RIGHT CONTENT -->
+    <main class="main">
+
+      <div class="sec">
+        <div class="main-h">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>
+          Profile
+        </div>
+        <p class="profile-p">Experienced deckhand with a background in private and commercial yacht operations, specializing in tender handling, exterior maintenance, and general deck duties. Strong foundation in high-end hospitality combined with practical maritime skills, including safety procedures, line handling, and guest support. Reliable, disciplined, and detail-oriented, performing effectively under pressure in fast-paced environments. Multilingual and proactive, bringing professionalism, discretion, and a strong focus on safety and service excellence. Seeking to join a professional yacht crew where I can contribute immediately and continue developing within the industry.</p>
+      </div>
+
+      <div class="sec exp">
+        <div class="main-h">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18l-1.5-5H4.5z"/><path d="M12 13V4M8 7l4-3 4 3"/><path d="M2 21c1.5 0 1.5-1 3-1s1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1"/></svg>
+          Experience
         </div>
 
-        <div class="exp">
-          <div class="top"><span class="vessel">M/Y Maje</span><span class="dates">Jan – Apr 2026</span></div>
-          <div class="jobrole">Mate / Deckhand · Fort Lauderdale</div>
-          <ul class="clean">
-            <li>Kept fiberglass and metal surfaces pristine through routine washing and polishing.</li>
-            <li>Delivered high-yacht-standard exterior detailing with rotary polishing machines and marine-grade products (3M, Flitz).</li>
-            <li>Supported safe docking and undocking, working seamlessly with the captain and crew under pressure.</li>
-          </ul>
+        <div class="job">
+          <div class="job-meta">
+            <div class="job-vessel">M/Y KOJU</div>
+            <span class="job-period">Apr–May 2026</span>
+          </div>
+          <div>
+            <div class="job-role">Deckhand · Exterior Maintenance</div>
+            <ul>
+              <li>Professional yacht polishing and surface restoration on stainless steel and exterior finishes</li>
+              <li>Teak cleaning, sanding, restoration and maintenance to superyacht standards</li>
+              <li>General deck operations and exterior detailing to keep the vessel pristine</li>
+              <li>Routine maintenance, washdowns and upkeep of all exterior areas</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="exp">
-          <div class="top"><span class="vessel">M/Y Epic &amp; M/Y Intrepid</span><span class="dates">Feb 2026</span></div>
-          <div class="jobrole">Deckhand · Fort Lauderdale</div>
-          <ul class="clean">
-            <li>Covered exterior, interior and bilge upkeep across two vessels, keeping every space clean and organized.</li>
-            <li>Polished stainless steel and metal surfaces to high yacht standards.</li>
-            <li>Held the vessels to a guest-ready standard of cleanliness and presentation.</li>
-          </ul>
+        <div class="job">
+          <div class="job-meta">
+            <div class="job-vessel">M/Y MAJE</div>
+            <span class="job-period">Jan–Apr 2026</span>
+          </div>
+          <div>
+            <div class="job-role">Mate · Deckhand — Fort Lauderdale</div>
+            <ul>
+              <li>Deck maintenance: washing, polishing fiberglass and metals</li>
+              <li>Operated rotary polishing machines and marine-grade products (3M, Flitz)</li>
+              <li>Docking and undocking operations; safety, cleanliness and organization onboard</li>
+              <li>Teak deck cleaning and restoration with 2-step systems</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="exp">
-          <div class="top"><span class="vessel">LPG/C Atlantic Victory</span><span class="dates">Feb – Dec 2025</span></div>
-          <div class="jobrole">Junior Officer · Worldwide</div>
-          <ul class="clean">
-            <li>Executed safe mooring and unmooring on every port arrival and departure across a worldwide trading route.</li>
-            <li>Stood bridge watch and lookout duties, supporting safe navigation on transoceanic voyages.</li>
-            <li>Preserved the hull against the open ocean — washing, painting and rust treatment to protect the asset.</li>
-          </ul>
+        <div class="job">
+          <div class="job-meta">
+            <div class="job-vessel">M/Y EPIC &amp; M/Y INTREPID</div>
+            <span class="job-period">Feb 2026</span>
+          </div>
+          <div>
+            <div class="job-role">Deckhand — Fort Lauderdale</div>
+            <ul>
+              <li>Exterior wash, interior cleaning and organization; bilge cleaning and maintenance</li>
+              <li>Polishing stainless steel and metal surfaces; general yacht upkeep</li>
+              <li>High standards of cleanliness and presentation</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="exp">
-          <div class="top"><span class="vessel">M/V Mexican Giant</span><span class="dates">Jun – Nov 2024</span></div>
-          <div class="jobrole">Sole Deck · Cabotage Mexico</div>
-          <ul class="clean">
-            <li>Ran deck single-handed, keeping operations safe and efficient through disciplined routine maintenance.</li>
-            <li>Coordinated and assisted commercial divers during offshore diving operations.</li>
-            <li>Worked deck safely alongside offshore platforms in full compliance with safety procedures.</li>
-          </ul>
+        <div class="job">
+          <div class="job-meta">
+            <div class="job-vessel">LPG/C ATLANTIC VICTORY</div>
+            <span class="job-period">Feb–Dec 2025</span>
+          </div>
+          <div>
+            <div class="job-role">Junior Officer — Worldwide</div>
+            <ul>
+              <li>Mooring and unmooring during port arrivals and departures</li>
+              <li>Deck maintenance: washing, painting, rust treatment and preservation</li>
+              <li>Transoceanic voyages maintaining high safety and operational standards</li>
+              <li>Bridge watchkeeping; navigation watch routines, lookout, monitoring vessel traffic</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="exp">
-          <div class="top"><span class="vessel">M/T Alejandro</span><span class="dates">Aug 2023 – Mar 2024</span></div>
-          <div class="jobrole">Able Seaman</div>
-          <ul class="clean">
-            <li>Handled anchoring operations and core seamanship tasks to SOLAS and ISM safety standards.</li>
-            <li>Stayed drill-ready on emergency procedures and onboard safety protocols.</li>
-            <li>Earned a written reference from the master as a reliable, high-performing sailor.</li>
-          </ul>
+        <div class="job">
+          <div class="job-meta">
+            <div class="job-vessel">M/V MEXICAN GIANT</div>
+            <span class="job-period">Jun–Nov 2024</span>
+          </div>
+          <div>
+            <div class="job-role">Sole Deck — Cabotage Mexico</div>
+            <ul>
+              <li>Routine maintenance and upkeep for safe, efficient operations</li>
+              <li>Engine room / machinery tasks under engineering supervision</li>
+              <li>Supported offshore diving operations near platforms (safety compliance)</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="exp">
-          <div class="top"><span class="vessel">M/T Kefalonia</span><span class="dates">Mar 2016 – Feb 2017</span></div>
-          <div class="jobrole">Able Seaman</div>
-          <ul class="clean">
-            <li>Executed mooring and unmooring on every port arrival and departure; stood bridge watch and monitored vessel traffic.</li>
-            <li>Maintained the deck and kept safety equipment and PPE in service-ready condition.</li>
-          </ul>
+        <div class="job">
+          <div class="job-meta">
+            <div class="job-vessel">M/T ALEJANDRO</div>
+            <span class="job-period">Aug 2023–Mar 2024</span>
+          </div>
+          <div>
+            <div class="job-role">Able Seaman</div>
+            <ul>
+              <li>Use and maintenance of safety equipment and PPE; emergency procedures and drills</li>
+              <li>Anchoring operations and general seamanship; SOLAS and ISM standards</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="exp">
-          <div class="top"><span class="vessel">M/T Paterna</span><span class="dates">May – Nov 2011</span></div>
-          <div class="jobrole">Able Seaman</div>
-          <ul class="clean">
-            <li>Protected the hull on long passages through washing, painting, rust treatment and preservation.</li>
-            <li>Held high safety and operational standards across transoceanic voyages.</li>
-          </ul>
+        <div class="job">
+          <div class="job-meta">
+            <div class="job-vessel">M/T KEFALONIA</div>
+            <span class="job-period">2016–2017</span>
+          </div>
+          <div>
+            <div class="job-role">Able Seaman</div>
+            <ul>
+              <li>Mooring/unmooring; deck maintenance (washing, painting, rust treatment); bridge watchkeeping and lookout</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-meta">
+            <div class="job-vessel">M/T PATERNA</div>
+            <span class="job-period">2011</span>
+          </div>
+          <div>
+            <div class="job-role">Able Seaman</div>
+            <ul>
+              <li>Mooring/unmooring; deck maintenance and preservation; navigation watch support</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="block">
-        <h2 class="sec">References</h2>
+      <div class="sec">
+        <div class="main-h">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg>
+          Education
+        </div>
+        <ul class="edu">
+          <li><b>Caribbean Maritime University</b> — Jamaica</li>
+          <li><b>Merchant Marine School (ENAMM)</b> — Peru</li>
+          <li><b>Continental Aquatic Training and Development Center</b></li>
+        </ul>
+      </div>
+
+      <div class="sec">
+        <div class="main-h">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          References
+        </div>
         <div class="refs">
-          <div class="ref">
-            <div class="name">Capt. Jhonny Pretell</div>
-            <div class="org">Saucy Sue Sailing — Yacht Vessel</div>
-          </div>
-          <div class="ref">
-            <div class="name">Capt. Ray Balboa</div>
-            <div class="org">Barracuda Sailing — Yacht Vessel</div>
-          </div>
-          <div class="ref">
-            <div class="name">Capt. Felix Manco</div>
-            <div class="org">M/T Alejandro — Tanker Ship</div>
-          </div>
-          <div class="ref">
-            <div class="name">C/O Nicole Bellamy</div>
-            <div class="org">M/Y Kujo</div>
-          </div>
+          <div class="ref"><b>Capt. Jhonny Pretell</b> Saucy Sue Sailing (Yacht)</div>
+          <div class="ref"><b>Capt. Ray Balboa</b> Barracuda Sailing (Yacht)</div>
+          <div class="ref"><b>Capt. Felix Manco</b> M/T Alejandro (Tanker)</div>
+          <div class="ref"><b>C/O Nicole Bellamy</b> M/Y Kujo</div>
+        </div>
+        <div class="ref-note">Full reference contact details available on request.</div>
+      </div>
+
+      <div class="sec">
+        <div class="main-h">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M12 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M5 12a7 7 0 0 0 14 0"/><path d="M5 12H3l2-3M19 12h2l-2-3"/></svg>
+          Core Deck Skills
+        </div>
+        <ul class="deck-grid deck">
+          <li>Knot tying (bowline, clove hitch, sheet bend, reef knot)</li>
+          <li>Mooring &amp; unmooring operations</li>
+          <li>Docking &amp; undocking assistance</li>
+          <li>Helmsman / steering — safety &amp; lookout duties</li>
+          <li>Line handling and fendering — anchoring operations</li>
+        </ul>
+      </div>
+
+      <div class="closing-wrap">
+      <div class="main-spacer"></div>
+
+      <div class="closing">
+        <div class="ct">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 5h14M12 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+          Available &amp; Ready to Join
+        </div>
+        <p>Disciplined, multilingual deckhand seeking a professional yacht crew position. Immediate availability, valid US B1/B2 visa and ENG 1 medical, with strong tender-handling and exterior-maintenance skills ready to contribute from day one.</p>
+        <div class="cmeta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.34a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92z"/></svg>+1 954 856 1076</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>aamasiasmorales@hotmail.com</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Fort Lauderdale, FL</span>
         </div>
       </div>
+      </div>
+
+    </main>
+
+    <!-- FAR-RIGHT PHOTO GALLERY -->
+    <div class="strip">
+      <div class="tile t-officer"><img src="cv-assets/officer.png" alt=""></div>
+      <div class="tile t-polishing"><img src="cv-assets/polishing.png" alt=""></div>
+      <div class="gallery-gap"></div>
+      <div class="tile t-deckwork"><img src="cv-assets/deckwork.png" alt=""></div>
+      <div class="tile t-superyacht"><img src="cv-assets/superyacht.png" alt=""></div>
     </div>
+
   </div>
 
-  <div class="footer">Full reference contact details available on request</div>
 </div>
 </body>
 </html>
