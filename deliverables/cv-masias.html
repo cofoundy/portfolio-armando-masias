@@ -38,8 +38,8 @@
   .header{
     display:flex;
     align-items:center;
-    gap:24px;
-    padding:30px 36px 26px 36px;
+    gap:20px;
+    padding:22px 30px 20px 32px;
     background:linear-gradient(105deg,var(--navy-deep) 0%,var(--navy) 55%,var(--navy-soft) 100%);
     color:#fff;
     position:relative;
@@ -75,10 +75,25 @@
   }
   .contact .ci{display:flex;align-items:center;gap:9px;font-size:11px;color:rgba(255,255,255,.92);}
   .contact .ci svg{width:14px;height:14px;flex-shrink:0;stroke:var(--steel-light);}
+  .contact .ci a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(111,160,201,.55);}
+
+  /* QR card in header */
+  .head-qr{
+    flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:5px;
+  }
+  .head-qr .qr-card{
+    background:#fff;padding:6px;border-radius:7px;
+    box-shadow:0 4px 12px rgba(0,0,0,.30);line-height:0;
+  }
+  .head-qr .qr-card img{width:78px;height:78px;display:block;}
+  .head-qr .qr-cap{
+    font-size:8.5px;letter-spacing:.6px;text-transform:uppercase;
+    color:rgba(255,255,255,.78);text-align:center;
+  }
 
   /* ============ BODY GRID ============ */
-  .body{display:grid;grid-template-columns:224px 1fr 172px;min-height:2040px;align-items:stretch;}
-  .closing{min-height:240px;}
+  .body{display:grid;grid-template-columns:212px 1fr 204px;min-height:1900px;align-items:stretch;}
+  .closing{min-height:auto;}
 
   /* ---- LEFT NAVY SIDEBAR ---- */
   .side{
@@ -109,14 +124,14 @@
   .side li b{color:#fff;font-weight:600;}
 
   /* ---- RIGHT WHITE CONTENT ---- */
-  .main{padding:26px 26px 0 28px;min-width:0;display:flex;flex-direction:column;align-self:stretch;background:var(--paper);}
-  .main .sec{margin-bottom:20px;}
-  .main-spacer{height:26px;}
-  .closing-wrap{margin-top:auto;}
+  .main{padding:26px 26px 28px 28px;min-width:0;display:flex;flex-direction:column;align-self:start;background:var(--paper);}
+  .main .sec{margin-bottom:18px;}
+  .main-spacer{height:22px;}
+  .closing-wrap{flex:0 0 auto;}
   .closing{
     margin:0 -26px 0 -28px;
     background:linear-gradient(105deg,var(--navy-deep),var(--navy) 60%,var(--navy-soft));
-    color:#fff;padding:20px 28px;position:relative;
+    color:#fff;padding:15px 28px 16px;position:relative;
     break-inside:avoid;page-break-inside:avoid;
   }
   .closing::before{
@@ -145,10 +160,10 @@
     content:"";flex:1;height:2px;margin-left:4px;
     background:linear-gradient(90deg,var(--line),transparent);
   }
-  .profile-p{font-size:11px;line-height:1.62;color:var(--muted);text-align:justify;}
+  .profile-p{font-size:10.8px;line-height:1.48;color:var(--muted);text-align:justify;}
 
   /* Experience */
-  .job{display:grid;grid-template-columns:122px 1fr;gap:14px;margin-bottom:14px;break-inside:avoid;page-break-inside:avoid;}
+  .job{display:grid;grid-template-columns:122px 1fr;gap:14px;margin-bottom:9px;break-inside:avoid;page-break-inside:avoid;}
   .job:last-child{margin-bottom:0;}
   .main .sec{break-inside:avoid;page-break-inside:avoid;}
   .main .sec.exp{break-inside:auto;page-break-inside:auto;}
@@ -171,20 +186,20 @@
   }
 
   /* Education / two-col lists */
-  .edu li{list-style:none;font-size:11px;line-height:1.5;color:var(--muted);
-    padding-left:14px;position:relative;margin-bottom:10px;}
+  .edu li{list-style:none;font-size:11px;line-height:1.45;color:var(--muted);
+    padding-left:14px;position:relative;margin-bottom:6px;}
   .edu li::before{content:"";position:absolute;left:1px;top:6px;width:4px;height:4px;
     border-radius:50%;background:var(--steel);}
   .edu li b{color:var(--navy);font-weight:600;}
 
-  .refs{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;}
+  .refs{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;}
   .ref{font-size:10.4px;line-height:1.35;color:var(--muted);
     padding-left:13px;position:relative;}
   .ref::before{content:"";position:absolute;left:0;top:5px;width:5px;height:5px;
     border-radius:50%;background:var(--steel-light);}
   .ref b{display:block;color:var(--navy);font-weight:700;font-size:10.6px;}
 
-  .deck-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;}
+  .deck-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px 16px;}
   .deck li{list-style:none;font-size:11px;line-height:1.4;color:var(--muted);
     padding-left:13px;position:relative;margin-bottom:3px;}
   .deck li::before{content:"\2693";position:absolute;left:0;top:0;font-size:9px;color:var(--steel);}
@@ -198,7 +213,7 @@
     padding:24px 14px;gap:18px;
   }
   .tile{
-    width:100%;height:300px;overflow:hidden;border-radius:5px;
+    width:100%;height:318px;overflow:hidden;border-radius:5px;
     box-shadow:0 4px 12px rgba(0,0,0,.30);
     border:2px solid rgba(255,255,255,.10);
     flex:0 0 auto;
@@ -211,7 +226,7 @@
   .tile.t-deckwork img{object-position:48% 42%;}
   .tile.t-superyacht img{object-position:50% 50%;}
   /* navy spacer bridging the page break so tiles land 2-per-page */
-  .gallery-gap{flex:0 0 auto;height:310px;}
+  .gallery-gap{flex:0 0 auto;height:245px;}
 
   /* Footer band */
   .footer{
@@ -254,6 +269,14 @@
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         @armandoanthony33
       </div>
+      <div class="ci">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>
+        <a href="https://armando-masias.cofoundy.dev">armando-masias.cofoundy.dev</a>
+      </div>
+    </div>
+    <div class="head-qr">
+      <div class="qr-card"><img src="cv-assets/qr-web.png" alt="Portfolio QR"></div>
+      <div class="qr-cap">Scan for my portfolio</div>
     </div>
   </header>
 
