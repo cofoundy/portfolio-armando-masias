@@ -7,7 +7,7 @@
 | Tier | Pro (S/.120) |
 | Dev | Andre |
 | Email | aamasiasmorales@hotmail.com |
-| WhatsApp | 965626111 (Inbox AI, "Chris") · form 923282720 · CV +1 954 856 1076 |
+| WhatsApp | 965626111 (Fovente, "Chris") · form 923282720 · CV +1 954 856 1076 |
 | LinkedIn | (no proporcionado) |
 | Instagram | armandoanthony33 |
 | Voucher monto | S/.120 (Yape Op. 03840312, 16 May 2026, a Melissa Ima* ***426) — verificado |
